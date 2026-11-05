@@ -1,0 +1,92 @@
+/* One plain stylesheet for every demo. No CSS modules, no libraries: the point
+   of the demos is the components, not the styling. */
+:root {
+  --navy: #152238; --mid: #3a5578; --amber: #b97a1f; --grey: #5b6b82;
+  --tint: #eef2f8; --ink: #1b2430; --line: #dde3ee; --ok: #1f8a5b; --bad: #b94a48;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--tint); color: var(--ink);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; line-height: 1.45; }
+a { color: var(--mid); }
+code, pre { font-family: Consolas, "SFMono-Regular", Menlo, monospace; }
+.container { max-width: 1100px; margin: 0 auto; padding: 24px; }
+.grid2 { display: grid; grid-template-columns: 1.4fr 1fr; gap: 20px; align-items: start; }
+@media (max-width: 860px) { .grid2 { grid-template-columns: 1fr; } }
+.stack > * + * { margin-top: 16px; }
+.row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+.row.between { justify-content: space-between; }
+.card { background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 18px 20px;
+  box-shadow: 0 1px 2px rgba(20,30,60,.05); }
+.card h2 { margin: 0 0 10px; font-size: 1.1rem; color: var(--navy); }
+h1 { margin: 0; font-size: 1.6rem; color: var(--navy); font-family: Cambria, Georgia, serif; }
+.muted { color: var(--grey); font-size: .9rem; }
+.hero { background: var(--navy); color: #fff; padding: 22px 24px; border-radius: 12px; }
+.hero h1 { color: #fff; }
+.hero .muted { color: #aab8cc; }
+.btn { background: var(--navy); color: #fff; border: 0; border-radius: 8px; padding: 9px 16px;
+  font-size: .95rem; cursor: pointer; }
+.btn:hover { background: var(--mid); }
+.btn:disabled { opacity: .5; cursor: not-allowed; }
+.btn.secondary { background: #fff; color: var(--navy); border: 1px solid var(--line); }
+.btn.danger { background: var(--bad); }
+.btn.small { padding: 5px 10px; font-size: .82rem; }
+.input { flex: 1; min-width: 0; padding: 9px 11px; border: 1px solid #c7cfdf; border-radius: 8px; font-size: .95rem; }
+.input:focus { outline: 2px solid #8fb0ff; }
+label.lbl { display: block; font-size: .85rem; font-weight: 600; color: #3b4660; margin-bottom: 6px; }
+.pill { background: var(--tint); border: 1px solid var(--line); border-radius: 999px; padding: 3px 10px; font-size: .8rem; }
+.badge { border-radius: 6px; padding: 2px 8px; font-size: .78rem; font-weight: 600; }
+.badge.ok { background: #e3f4eb; color: var(--ok); }
+.badge.bad { background: #f8e6e5; color: var(--bad); }
+.badge.warn { background: #fdf0d9; color: var(--amber); }
+.stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.stat { background: var(--tint); border-radius: 10px; padding: 12px 14px; }
+.stat b { display: block; font-size: 1.6rem; color: var(--navy); }
+table.tbl { width: 100%; border-collapse: collapse; font-size: .92rem; }
+table.tbl th { text-align: left; color: var(--grey); font-weight: 600; padding: 6px 8px; border-bottom: 1px solid var(--line); }
+table.tbl td { padding: 8px; border-bottom: 1px solid var(--line); }
+.vcard { border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; background: #fff; }
+.vcard + .vcard { margin-top: 10px; }
+.vcard .name { font-weight: 700; color: var(--navy); }
+.num { display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px;
+  border-radius: 50%; background: var(--amber); color: #fff; font-size: .72rem; font-weight: 700; margin-right: 6px; }
+.receipt { border: 1px solid #cfe6da; background: #f4fbf7; border-radius: 10px; padding: 12px 14px; }
+.receipt .head { display: flex; justify-content: space-between; font-weight: 700; color: var(--ok); margin-bottom: 6px; }
+.receipt .line { display: flex; gap: 10px; font-size: .88rem; }
+.receipt .line span:first-child { width: 88px; flex: none; color: var(--grey); }
+.receipt code { word-break: break-all; font-size: .8rem; }
+.msg { border-radius: 8px; padding: 9px 12px; font-size: .9rem; }
+.msg.info { background: #eaf0fb; color: var(--mid); }
+.msg.ok { background: #e3f4eb; color: var(--ok); }
+.msg.err { background: #f8e6e5; color: var(--bad); }
+.msg.warn { background: #fdf0d9; color: #8a5a12; }
+pre.inspect { background: #0f1b2e; color: #e7ecf5; border-radius: 10px; padding: 14px; font-size: .84rem;
+  overflow: auto; margin: 0; }
+.log { background: #0f1b2e; color: #e7ecf5; border-radius: 10px; padding: 10px 12px; font-size: .82rem;
+  max-height: 340px; overflow: auto; font-family: Consolas, monospace; }
+.log div { padding: 2px 0; }
+.log .up { color: #e8a33d; }
+.log .down { color: #7fb3e8; }
+.nav { background: var(--navy); }
+.nav .container { display: flex; align-items: center; gap: 6px; padding-top: 12px; padding-bottom: 12px; }
+.nav a { color: #cfd9e8; text-decoration: none; padding: 6px 12px; border-radius: 8px; }
+.nav a.active { background: var(--mid); color: #fff; }
+.nav .brand { color: #fff; font-weight: 700; margin-right: 12px; }
+.route { background: #fff7e8; border-bottom: 1px solid #f0dcb4; font-family: Consolas, monospace; font-size: .82rem; color: #7a5412; }
+.route .container { padding-top: 6px; padding-bottom: 6px; }
+.steps { display: flex; gap: 8px; flex-wrap: wrap; }
+.step { border: 1px solid var(--line); border-radius: 8px; padding: 6px 10px; font-size: .85rem; color: var(--grey); background: #fff; }
+.step.on { border-color: var(--amber); color: #7a5412; background: #fff7e8; font-weight: 600; }
+.step.done { border-color: #bfe0cf; color: var(--ok); background: #f4fbf7; }
+.tabs { display: inline-flex; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+.tabs button { background: #fff; border: 0; padding: 7px 14px; cursor: pointer; font-size: .9rem; }
+.tabs button.on { background: var(--navy); color: #fff; }
+/* "X-ray" mode: outlines every component and prints its name. */
+.xray .comp { outline: 2px dashed var(--amber); outline-offset: 5px; position: relative; margin-top: 26px; }
+.xray .comp::before { content: "<" attr(data-name) " />"; position: absolute; top: -23px; left: 0;
+  font: 600 11px Consolas, monospace; color: #7a5412; background: #fff7e8; padding: 1px 6px; border-radius: 4px; }
+.xray .comp .comp { outline-color: var(--mid); }
+.xray .comp .comp::before { color: var(--mid); background: #eaf0fb; }
+.grid2 > * { min-width: 0; }
+.xray .comp::before { white-space: nowrap; }
+select.input { background: #fff; }
+a .card:hover { border-color: var(--amber); }

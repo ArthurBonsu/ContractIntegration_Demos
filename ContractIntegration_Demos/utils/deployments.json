@@ -1,0 +1,23 @@
+{
+  "_comment": "Public deployments, keyed by chain id. Written by the migrations (scripts/record-deployment.js). Commit this file.",
+  "11155111": {
+    "chainId": 11155111,
+    "networkId": "11155111",
+    "VehicleRegistry": {
+      "address": "0x0948161F56ce6Dc0450d1D3b901CdAcf5520d37D",
+      "txHash": "0xaecdd5ad925627c4f7cf7de90173336acfa6f3f9af418e5aec8c02eac109dc0e",
+      "startBlock": 11912889
+    },
+    "RevocationManager": {
+      "address": "0x898226D7853EFa2dDB494eC990bEa1dD3B56d04a",
+      "txHash": "0x9603efff614a9e91fd1d0c69ef4c1dd6d33824df9968e6dbee79451b05e70d09",
+      "startBlock": 11913096
+    },
+    "LicenseRegistry": {
+      "address": "0xe7D5e4E17186cA637925B4aD280940893Fa9ddA6",
+      "txHash": "0xc95f90219d7c7f77e0bae75baf400ea6239651d0cb603f49572616518c3d14dc",
+      "startBlock": 11913169
+    },
+    "updatedAt": "2026-10-14T00:00:00.000Z"
+  }
+}

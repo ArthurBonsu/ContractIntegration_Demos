@@ -1,0 +1,33 @@
+{
+  "name": "contract-integration-demos",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3000",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "chain": "ganache --port 7545 --chain.networkId 5777 --chain.chainId 1337 --wallet.deterministic",
+    "contracts:compile": "truffle compile",
+    "deploy:local": "truffle migrate --network development --reset",
+    "deploy:sepolia": "truffle migrate --network sepolia"
+  },
+  "dependencies": {
+    "next": "14.2.15",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "web3": "^4.16.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "typescript": "^5",
+    "@openzeppelin/contracts": "5.0.2",
+    "@truffle/hdwallet-provider": "^2.1.15",
+    "dotenv": "^16.4.5",
+    "ganache": "^7.9.2",
+    "truffle": "^5.11.5"
+  },
+  "description": "Three small demos of smart-contract integration with a Next.js front end: register a vehicle, revoke it, issue a license, each ending in a receipt."
+}

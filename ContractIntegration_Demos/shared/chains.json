@@ -1,0 +1,192 @@
+{
+  "_comment": "Single list of networks. Read by truffle-config.js, scripts/*.ts and the front end (blockchain/wallets/networks.ts). To add a network, add it here only. key = Truffle network name.",
+  "chains": [
+    {
+      "chainId": 1,
+      "key": "mainnet",
+      "name": "Ethereum Mainnet",
+      "kind": "L1",
+      "testnet": false,
+      "rpcUrls": [
+        "https://ethereum-rpc.publicnode.com"
+      ],
+      "explorer": "https://etherscan.io",
+      "currency": {
+        "name": "Ether",
+        "symbol": "ETH",
+        "decimals": 18
+      },
+      "infura": "mainnet"
+    },
+    {
+      "chainId": 11155111,
+      "key": "sepolia",
+      "name": "Sepolia",
+      "kind": "L1",
+      "testnet": true,
+      "rpcUrls": [
+        "https://ethereum-sepolia-rpc.publicnode.com"
+      ],
+      "explorer": "https://sepolia.etherscan.io",
+      "currency": {
+        "name": "Ether",
+        "symbol": "ETH",
+        "decimals": 18
+      },
+      "infura": "sepolia"
+    },
+    {
+      "chainId": 42161,
+      "key": "arbitrum",
+      "name": "Arbitrum One",
+      "kind": "L2",
+      "testnet": false,
+      "rpcUrls": [
+        "https://arb1.arbitrum.io/rpc"
+      ],
+      "explorer": "https://arbiscan.io",
+      "currency": {
+        "name": "Ether",
+        "symbol": "ETH",
+        "decimals": 18
+      },
+      "infura": "arbitrum-mainnet"
+    },
+    {
+      "chainId": 421614,
+      "key": "arbitrumSepolia",
+      "name": "Arbitrum Sepolia",
+      "kind": "L2",
+      "testnet": true,
+      "rpcUrls": [
+        "https://sepolia-rollup.arbitrum.io/rpc"
+      ],
+      "explorer": "https://sepolia.arbiscan.io",
+      "currency": {
+        "name": "Ether",
+        "symbol": "ETH",
+        "decimals": 18
+      },
+      "infura": "arbitrum-sepolia"
+    },
+    {
+      "chainId": 10,
+      "key": "optimism",
+      "name": "OP Mainnet",
+      "kind": "L2",
+      "testnet": false,
+      "rpcUrls": [
+        "https://mainnet.optimism.io"
+      ],
+      "explorer": "https://optimistic.etherscan.io",
+      "currency": {
+        "name": "Ether",
+        "symbol": "ETH",
+        "decimals": 18
+      },
+      "infura": "optimism-mainnet"
+    },
+    {
+      "chainId": 11155420,
+      "key": "optimismSepolia",
+      "name": "OP Sepolia",
+      "kind": "L2",
+      "testnet": true,
+      "rpcUrls": [
+        "https://sepolia.optimism.io"
+      ],
+      "explorer": "https://sepolia-optimism.etherscan.io",
+      "currency": {
+        "name": "Ether",
+        "symbol": "ETH",
+        "decimals": 18
+      },
+      "infura": "optimism-sepolia"
+    },
+    {
+      "chainId": 8453,
+      "key": "base",
+      "name": "Base",
+      "kind": "L2",
+      "testnet": false,
+      "rpcUrls": [
+        "https://mainnet.base.org"
+      ],
+      "explorer": "https://basescan.org",
+      "currency": {
+        "name": "Ether",
+        "symbol": "ETH",
+        "decimals": 18
+      },
+      "infura": "base-mainnet"
+    },
+    {
+      "chainId": 84532,
+      "key": "baseSepolia",
+      "name": "Base Sepolia",
+      "kind": "L2",
+      "testnet": true,
+      "rpcUrls": [
+        "https://sepolia.base.org"
+      ],
+      "explorer": "https://sepolia.basescan.org",
+      "currency": {
+        "name": "Ether",
+        "symbol": "ETH",
+        "decimals": 18
+      },
+      "infura": "base-sepolia"
+    },
+    {
+      "chainId": 137,
+      "key": "polygon",
+      "name": "Polygon PoS",
+      "kind": "Sidechain",
+      "testnet": false,
+      "rpcUrls": [
+        "https://polygon-rpc.com"
+      ],
+      "explorer": "https://polygonscan.com",
+      "currency": {
+        "name": "POL",
+        "symbol": "POL",
+        "decimals": 18
+      },
+      "infura": "polygon-mainnet"
+    },
+    {
+      "chainId": 80002,
+      "key": "polygonAmoy",
+      "name": "Polygon Amoy",
+      "kind": "Sidechain",
+      "testnet": true,
+      "rpcUrls": [
+        "https://rpc-amoy.polygon.technology"
+      ],
+      "explorer": "https://amoy.polygonscan.com",
+      "currency": {
+        "name": "POL",
+        "symbol": "POL",
+        "decimals": 18
+      },
+      "infura": "polygon-amoy"
+    },
+    {
+      "chainId": 1337,
+      "key": "development",
+      "name": "Ganache (local)",
+      "kind": "Local",
+      "testnet": true,
+      "rpcUrls": [
+        "http://127.0.0.1:7545"
+      ],
+      "explorer": "",
+      "currency": {
+        "name": "Ether",
+        "symbol": "ETH",
+        "decimals": 18
+      },
+      "infura": null
+    }
+  ]
+}
